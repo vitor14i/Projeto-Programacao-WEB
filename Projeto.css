@@ -1,0 +1,121 @@
+/* Reset e configurações globais */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+/* Barra de navegação */
+nav{
+    background: #222;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;  
+}
+
+/* Lista de navegação */
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Itens da lista de navegação */
+nav ul li{
+    margin: 15px;
+}
+
+/* Links da navegação */
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Efeito hover nos links da navegação */
+nav ul li a:hover{
+    color: #f39c12
+}
+
+/* Seção Home com imagem de fundo */
+#home{
+    background: url('./Imagem_TI.jpeg') center/cover no-repeat;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título principal da Home */
+#home h1{
+    font-size: 40px;
+}
+
+/* Parágrafo da Home */
+#home p{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Estilização geral das seções */
+section{
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Formulário de contato */
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Rótulos do formulário */
+form label{
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Campos de entrada do formulário */
+form input, form textarea{
+    padding:  10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botão do formulário */
+form button{
+    background: #222;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Efeito hover no botão do formulário */
+form button:hover{
+    background: #f39c12;
+}
+
+/* Rodapé do site */
+footer{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Centralização de elementos (ex: vídeo) */
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

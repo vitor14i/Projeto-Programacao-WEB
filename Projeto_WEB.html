@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto WEB</title>
+    <link rel="stylesheet" href="Projeto.css">
+</head>
+<body>
+    <!-- Navegação principal do site -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servico-desktop">Serviço Desktop</a></li>
+            <li><a href="#servico-mobile">Serviço Mobile</a></li>
+            <li><a href="#contato">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <h1>Bem-Vindo à Empresa Tech ES</h1>
+        <p>Soluções modernas para problemas antigos.</p>
+    </section>
+
+    <!-- Seção Sobre a Empresa -->
+    <section id="sobre">
+        <h2>Sobre a Empresa</h2>
+        <p>A empresa é uma empresa que faz coisas que empresas fazem para que os compradores comprem o que ele quer que voce compre.</p>
+    </section>
+
+    <!-- Seção de Serviços Desktop -->
+    <section id="servico-desktop">
+        <h2>Desenvolvimento Desktop</h2>
+        <p>Criamos coisas criativas que criam coisas criadas por outras coisas.</p>
+    </section>
+    <!-- Seção de Serviços Mobile -->
+    <section id="servico-mobile">
+        <h2>Desenvilvimento Mobile</h2>
+        <p>Aplicativos inovadores para pessoas preguiçosas que não querem ter trabalho de fazer as coisas ou até mesmo pensar. (Nossa IA pode pensar por voce!)</p>
+    </section>
+
+    <!-- Seção de Vídeo com Legenda -->
+    <div>
+        <video class="center" controls width="800" height="600">
+            <source src="./S01E01 - Pilot.mp4" type="video/mp4">
+            <track kind="subtitles" srclang="pt-br" src="./s01e01-pilot.vtt" label="legendas pt-br">
+        </video>
+    </div>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <Textarea id="mensagem" name="mensagem" rows="4" required></Textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>Siganos nas redes sociais</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagem</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+        <p>&copy; 2025 Empresa Tech ES - Todos od direitos reservador.</p>
+    </footer>
+
+</body>
+</html>
