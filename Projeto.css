@@ -103,7 +103,7 @@ nav ul li a:hover{
 
 /* Seção Home com imagem de fundo */
 #home{
-    background: url('./Imagem_TI.jpeg') center/cover no-repeat;
+    background: url('./Imagens/Imagem_TI.jpeg') center/cover no-repeat;
     color: rgb(255, 255, 255);
     text-align: center;
     height: 100vh;
