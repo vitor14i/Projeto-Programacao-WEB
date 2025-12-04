@@ -5,105 +5,216 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto WEB</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="Projeto.css">
 </head>
-<body>
+<body data-bs-theme="light">
     <!-- Cabeçalho com título do projeto e navegação -->
     <header>
-        <h1 id="titulo-projeto">Projeto Programação WEB</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#servico-desktop">Serviço Desktop</a></li>
-                <li><a href="#servico-mobile">Serviço Mobile</a></li>
-                <li><a href="#vantagens">Vantagens</a></li>
-                <li><a href="#contato">Contatos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#home">
+                    <i class="bi bi-code-slash"></i> Projeto WEB
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servico-desktop">Desktop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servico-mobile">Mobile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#posts">Posts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contatos</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
+    <!-- Botão de modo escuro/claro -->
+    <button class="btn btn-sm btn-outline-light" id="theme-toggle" title="Alternar tema">
+        <i class="bi bi-moon-fill"></i>
+    </button>
+
     <!-- Seção Home -->
-    <section id="home">
-    <h1>Bem-vindo à Empresa Tech ES</h1>
-        <p>Soluções modernas para problemas antigos.</p>
+    <section id="home" class="py-5">
+        <div class="container text-white text-center">
+            <h1 class="display-4 mb-4">Bem-vindo à Empresa Tech ES</h1>
+            <p class="lead">Soluções modernas para problemas antigos.</p>
+        </div>
     </section>
 
     <!-- Galeria de Imagens -->
-    <section id="galeria">
-        <h2>Galeria de Imagens</h2>
-        <div class="galeria-flex">
-            <img src="./Imagens/foto workspace.jpg" alt="Imagem 1" class="galeria-img">
-            <img src="./Imagens/foto codigo.jpg" alt="Imagem 2" class="galeria-img">
-            <img src="./Imagens/foto circuito.jpg" alt="Imagem 3" class="galeria-img">
+    <section id="galeria" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Galeria de Imagens</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 col-sm-6">
+                    <img src="./Imagens/foto workspace.jpg" alt="Imagem 1" class="img-fluid rounded galeria-img">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="./Imagens/foto codigo.jpg" alt="Imagem 2" class="img-fluid rounded galeria-img">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="./Imagens/foto circuito.jpg" alt="Imagem 3" class="img-fluid rounded galeria-img">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Lista de Vantagens -->
-    <section id="lista">
-        <h2>5 Vantagens de usar nossos serviços</h2>
-        <ul class="vantagens-lista">
-            <li>Atendimento personalizado</li>
-            <li>Equipe especializada</li>
-            <li>Suporte rápido</li>
-            <li>Preços competitivos</li>
-            <li>Tecnologia de ponta</li>
-        </ul>
+    <section id="vantagens" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">5 Vantagens de usar nossos serviços</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Atendimento personalizado</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Equipe especializada</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Suporte rápido</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Preços competitivos</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Tecnologia de ponta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Seção Sobre a Empresa -->
-    <section id="sobre">
-        <h2>Sobre a Empresa</h2>
-        <p>A empresa é uma empresa que faz coisas que empresas fazem para que os compradores comprem o que ele quer que você compre.</p>
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Sobre a Empresa</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="lead">A empresa é uma empresa que faz coisas que empresas fazem para que os compradores comprem o que ele quer que você compre.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Seção de Serviços Desktop -->
-    <section id="servico-desktop">
-        <h2>Desenvolvimento Desktop</h2>
-        <p>Criamos coisas criativas que criam coisas criadas por outras coisas.</p>
+    <section id="servico-desktop" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="bi bi-display me-2 text-primary"></i>Desenvolvimento Desktop</h3>
+                            <p class="card-text">Criamos coisas criativas que criam coisas criadas por outras coisas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="bi bi-phone me-2 text-primary"></i>Desenvolvimento Mobile</h3>
+                            <p class="card-text">Aplicativos inovadores para pessoas preguiçosas que não querem ter trabalho de fazer as coisas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
-    <!-- Seção de Serviços Mobile -->
-    <section id="servico-mobile">
-        <h2>Desenvolvimento Mobile</h2>
-        <p>Aplicativos inovadores para pessoas preguiçosas que não querem ter trabalho de fazer as coisas ou até mesmo pensar. (Nossa IA pode pensar por você!)</p>
+    <!-- Seção de Vídeo com Legenda -->
+    <section id="video" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Conheça Nossa Tecnologia</h2>
+            <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
+                <video controls>
+                    <source src="./Videos/nanotecnologia.mp4" type="video/mp4">
+                    <track kind="subtitles" srclang="pt-br" src="./Videos/nanotecnologia.vtt" label="legendas pt-br">
+                </video>
+            </div>
+        </div>
     </section>
 
-    <!-- Seção de Vídeo com Legenda -->
-    <div>
-        <video class="center" controls width="800" height="600">
-            <source src="./Videos/nanotecnologia.mp4" type="video/mp4">
-            <track kind="subtitles" srclang="pt-br" src="./Videos/nanotecnologia.vtt" label="legendas pt-br">
-        </video>
-    </div>
+    <!-- Seção de Posts -->
+    <section id="posts" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Compartilhe Suas Ideias</h2>
+            
+            <!-- Formulário de criação de posts -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" id="post-titulo" placeholder="Título do seu post...">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="post-conteudo" placeholder="Escreva seu post aqui..." rows="4"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-lg w-100" id="btn-postar">
+                                <i class="bi bi-plus-circle me-2"></i>Postar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Container de posts dinâmicos -->
+            <div class="row justify-content-center">
+                <div class="col-md-8" id="posts-container">
+                    <!-- Posts serão adicionados aqui dinamicamente -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Seção de Contato -->
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+    <section id="contato" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Entre em Contato</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="form-control" required>
+                        </div>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
 
-            <label for="mensagem">Mensagem</label>
-            <Textarea id="mensagem" name="mensagem" rows="4" required></Textarea>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
+                        </div>
 
-            <button type="submit">Enviar</button>
-        </form>
+                        <button type="submit" class="btn btn-dark btn-lg w-100">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Rodapé do site -->
-    <footer>
-    <p>Siga-nos nas redes sociais</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">LinkedIn</a></li>
-        </ul>
-    <p>&copy; 2025 Empresa Tech ES - Todos os direitos reservados.</p>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <p class="text-center mb-3">Siga-nos nas redes sociais</p>
+            <div class="text-center mb-3">
+                <ul class="list-unstyled">
+                    <li class="d-inline me-3"><a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    <li class="d-inline me-3"><a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    <li class="d-inline"><a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+            <p class="text-center">&copy; 2025 Empresa Tech ES - Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Arquivo JavaScript personalizado -->
+    <script src="script.js"></script>
 
 </body>
 </html>

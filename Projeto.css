@@ -1,182 +1,399 @@
-/* Cabeçalho do projeto */
-header {
-    background: #181818;
-    color: #fff;
-    padding: 30px 0 10px 0;
-    text-align: center;
+/* ==========================================
+   VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   ========================================== */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #f39c12;
+    --card-bg: #ffffff;
+    --text-primary: #333;
+    --bg-primary: #ffffff;
+    --border-color: #ddd;
+    --shadow: rgba(0, 0, 0, 0.15);
 }
 
-/* Título do projeto no cabeçalho */
-#titulo-projeto {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+[data-bs-theme="dark"] {
+    --card-bg: #2d2d2d;
+    --text-primary: #f0f0f0;
+    --bg-primary: #0f0f0f;
+    --border-color: #444;
+    --shadow: rgba(0, 0, 0, 0.4);
 }
 
-/* Galeria de imagens com Flexbox */
-.galeria-flex {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px 0;
-    flex-wrap: wrap;
-}
-
-/* Imagens individuais da galeria */
-.galeria-img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    border: 3px solid #f39c12;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-/* Efeito hover nas imagens da galeria */
-.galeria-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-}
-
-/* Lista de vantagens */
-.vantagens-lista {
-    display: inline-block;
-    text-align: left;
-    margin: 0 auto 30px auto;
-    padding: 20px 30px;
-    background: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    font-size: 1.1rem;
-    color: #222;
-    border-left: 5px solid #f39c12;
-}
-
-/* Itens individuais da lista de vantagens */
-.vantagens-lista li {
-    margin-bottom: 10px;
-    padding-left: 5px;
-}
 /* Reset e configurações globais */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Barra de navegação */
-nav{
-    background: #222;
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    text-align: center;  
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Lista de navegação */
-nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-/* Itens da lista de navegação */
-nav ul li{
-    margin: 15px;
-}
-
-/* Links da navegação */
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Efeito hover nos links da navegação */
-nav ul li a:hover{
-    color: #f39c12
-}
-
-/* Seção Home com imagem de fundo */
-#home{
-    background: url('./Imagens/Imagem_TI.jpeg') center/cover no-repeat;
-    color: rgb(255, 255, 255);
+section {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+    padding: 80px 20px;
     text-align: center;
+}
+
+/* ==========================================
+   SEÇÃO HOME
+   ========================================== */
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./Imagens/Imagem_TI.jpeg') center/cover no-repeat;
+    color: #ffffff;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-top: 56px;
 }
 
-/* Título principal da Home */
-#home h1{
-    font-size: 40px;
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
 }
 
-/* Parágrafo da Home */
-#home p{
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+#home p {
+    font-size: 1.5rem;
+    font-family: 'Cambria', serif;
+    animation: fadeInUp 1s ease-in-out;
 }
 
-/* Estilização geral das seções */
-section{
-    padding: 80px 20px;
-    text-align: center;
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Formulário de contato */
-form{
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Rótulos do formulário */
-form label{
-    text-align: left;
-    margin-top: 10px;
-    font-weight: bold;
+/* ==========================================
+   SEÇÕES GERAIS
+   ========================================== */
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-primary);
 }
 
-/* Campos de entrada do formulário */
-form input, form textarea{
-    padding:  10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+section h3 {
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
-/* Botão do formulário */
-form button{
-    background: #222;
+section p {
+    color: var(--text-primary);
+}
+
+#galeria h2 {
+    font-size: 2.5rem;
+}
+
+/* ==========================================
+   LISTA DE VANTAGENS
+   ========================================== */
+
+#vantagens .list-group-item {
+    border-left: 4px solid var(--secondary-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+#vantagens .list-group-item:hover {
+    background-color: rgba(243, 156, 18, 0.1);
+    transform: translateX(5px);
+}
+
+/* ==========================================
+   CARDS DE SERVIÇOS
+   ========================================== */
+
+.card {
+    border: none;
+    border-top: 4px solid var(--secondary-color);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--shadow) !important;
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.card-text {
+    color: var(--text-primary);
+}
+
+/* ==========================================
+   SEÇÃO DE POSTS
+   ========================================== */
+
+#posts {
+    min-height: 50vh;
+}
+
+#posts h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.post-card {
+    border: none;
+    border-left: 5px solid var(--secondary-color);
+    background-color: var(--card-bg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px var(--shadow) !important;
+}
+
+.post-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.post-card .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.like-btn {
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.like-btn:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border-color: #dc3545 !important;
+}
+
+.like-count {
+    margin-left: 8px;
+    font-weight: 700;
+}
+
+.like-animation {
+    animation: heartBeat 0.3s ease-in-out;
+}
+
+.unlike-animation {
+    animation: heartBreak 0.3s ease-in-out;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+}
+
+@keyframes heartBreak {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(0.8) rotate(-10deg); opacity: 0.7; }
+}
+
+/* ==========================================
+   FORMULÁRIOS
+   ========================================== */
+
+.form-control, 
+.form-control-lg {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, 
+.form-control-lg:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(243, 156, 18, 0.25);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ==========================================
+   BOTÕES
+   ========================================== */
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-dark {
+    background-color: #222;
+    border-color: #222;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.navbar-collapse {
+    flex-basis: auto !important;
+}
+
+.navbar-nav {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+#theme-toggle {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 1050;
+}
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+
+footer {
+    background-color: #222;
     color: white;
-    padding: 10px;
-    cursor: pointer;
+    margin-top: 60px;
+    border-top: 3px solid var(--secondary-color);
+    transition: background-color 0.3s ease;
 }
 
-/* Efeito hover no botão do formulário */
-form button:hover{
-    background: #f39c12;
+footer a {
+    transition: color 0.3s ease;
 }
 
-/* Rodapé do site */
-footer{
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
+footer a:hover {
+    color: var(--secondary-color) !important;
 }
 
-/* Centralização de elementos (ex: vídeo) */
-.center{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+[data-bs-theme="dark"] footer {
+    background-color: #1a1a1a;
 }
+
+/* ==========================================
+   SEÇÃO DE CONTATO
+   ========================================== */
+
+#contato {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+#contato h2 {
+    color: var(--text-primary);
+}
+
+#contato p {
+    color: var(--text-primary);
+}
+
+[data-bs-theme="light"] #contato {
+    background-color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] #contato {
+    background-color: #0f0f0f;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+
+@media (max-width: 768px) {
+    #home h1 { font-size: 2.5rem; }
+    #home p { font-size: 1.2rem; }
+    section h2 { font-size: 1.8rem; }
+    .galeria-img { height: 200px; }
+    .post-card .card-title { font-size: 1.1rem; }
+}
+
+@media (max-width: 576px) {
+    #home h1 { font-size: 2rem; }
+    #home p { font-size: 1rem; }
+    section h2 { font-size: 1.5rem; }
+    .galeria-img { height: 180px; width: 100%; }
+    .post-card { margin-bottom: 15px; }
+}
+
+/* ==========================================
+   UTILITÁRIOS
+   ========================================== */
+
+.text-muted { color: #999 !important; }
+.lead { color: var(--text-primary); }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--secondary-color); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #e67e22; }
